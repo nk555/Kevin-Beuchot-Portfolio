@@ -1,0 +1,254 @@
+Action State,Description 1,Description 2
+DeadDown,Bottom death,Bottom death
+DeadLeft,Left death,Side Death
+DeadRight,Right death,Side Death
+DeadUp,Top Death,Top Death
+DeadUpStar,Star KO,Top Death
+DeadUpStarIce,Star KO,Top Death
+DeadUpFallHitCamera,Star KO,Top Death
+DeadUpFallIce,Star KO,Top Death
+DeadUpFallHitCameraIce,Star KO,Top Death
+Sleep,Companion character death,Companion character death
+Rebirth,Entering on halo,Entering on halo
+RebirthWait,Waiting on halo,Waiting on halo
+Wait,Standing state,Standing state
+WalkSlow,Slow Walk,Slow Walk
+WalkMiddle,Walk,Walk
+WalkFast,Fast Walk,Fast Walk
+Turn,Turn,Turn
+TurnRun,Turn Running,Turn Running
+Dash,Foxtrot,Foxtrot
+Run,Run,Run
+RunDirect,Running,Running
+RunBrake,Stop Run,Stop Run
+KneeBend,Pre-jump animation,Jump
+JumpF,First jump forward,Jump
+JumpB,First jump backward,Jump
+JumpAerialF,Second jump forward,Second jump
+JumpAerialB,Second jump backward,Second jump
+Fall,Falling straight down,Falling
+FallF,Falling forward DI,Falling
+FallB,Falling backward DI,Falling
+FallAerial,Falling after second jump,Falling
+FallAerialF,Falling after second jump forward DI,Falling
+FallAerialB,Falling after second jump backward DI,Falling
+FallSpecial,Freefall after airdodge,Freefall
+FallSpecialF,Freefall after airdodge forward DI,Freefall
+FallSpecialB,Freefall after airdodge backward DI,Freefall
+DamageFall,Tumbling,Tumbling
+Squat,Going from stand to crouch,Going from stand to crouch
+SquatWait,Crouching,Crouching
+SquatRv,Going from crouch to stand,Going from crouch to stand
+Landing,Landing,Landing
+LandingFallSpecial,Landing freefall,Landing
+Attack11,Jab 1,Jab
+Attack12,Jab 2,Jab
+Attack13,Jab 3,Jab
+Attack100Start,Start rapid jab,Jab
+Attack100Loop,Middle rapid jab,Jab
+Attack100End,End rapid jab,Jab
+AttackDash,Dash attack,Dash attack
+AttackS3Hi,High Ftilt,Ftilt
+AttackS3HiS,High-mid Ftilt,Ftilt
+AttackS3S,Mid Ftilt,Ftilt
+AttackS3LwS,Low-mid Ftilt,Ftilt
+AttackS3Lw,Low Ftilt,Ftilt
+AttackHi3,Uptilt,Uptilt
+AttackLw3,Downtilt,Downtilt
+AttackS4Hi,High Fsmash,Fsmash
+AttackS4HiS,High-mid Fsmash,Fsmash
+AttackS4S,Mid Fsmash,Fsmash
+AttackS4LwS,Low-mid Fsmash,Fsmash
+AttackS4Lw,Low Fsmash,Fsmash
+AttackHi4,Upsmash,Upsmash
+AttackLw4,Downsmash,Downsmash
+AttackAirN,Nair,Nair
+AttackAirF,Fair,Fair
+AttackAirB,Bair,Bair
+AttackAirHi,Uair,Uair
+AttackAirLw,Dair,Dair
+LandingAirN,Landing during Nair,Landing during attack
+LandingAirF,Landing during Fair,Landing during attack
+LandingAirB,Landing during Bair,Landing during attack
+LandingAirHi,Landing during Uair,Landing during attack
+LandingAirLw,Landing during Dair,Landing during attack
+DamageHi1,DamageHi2,Damage
+DamageHi2,DamageHi3,Damage
+DamageHi3,DamageHi4,Damage
+DamageN1,DamageN2,Damage
+DamageN2,DamageN3,Damage
+DamageN3,DamageN4,Damage
+DamageLw1,DamageLw2,Damage
+DamageLw2,DamageLw3,Damage
+DamageLw3,DamageLw4,Damage
+DamageAir1,DamageAir2,Damage
+DamageAir2,DamageAir3,Damage
+DamageAir3,DamageAir4,Damage
+DamageFlyHi,DamageFlyHi,Damage
+DamageFlyN,DamageFlyN,Damage
+DamageFlyLw,DamageFlyLw,Damage
+DamageFlyTop,DamageFlyTop,Damage
+DamageFlyRoll,DamageFlyRoll,Damage
+LightGet,Pick item,Pick item
+HeavyGet,Pick heavy item,Pick item
+LightThrowF,Throw item forward,Item throw
+LightThrowB,Throw item backward,Item throw
+LightThrowHi,Throw item up,Item throw
+LightThrowLw,Throw item down,Item throw
+LightThrowDash,Throw item dashing,Item throw
+LightThrowDrop,Release item,Item throw
+LightThrowAirF,Throw item forward air,Item throw
+LightThrowAirB,Throw item backward air,Item throw
+LightThrowAirHi,Throw item up air,Item throw
+LightThrowAirLw,Throw item down air,Item throw
+HeavyThrowF,,Item throw
+HeavyThrowB,,Item throw
+HeavyThrowHi,,Item throw
+HeavyThrowLw,,Item throw
+LightThrowF4,Throwing items at Smash speed,Strong item throw
+LightThrowB4,,Strong item throw
+LightThrowHi4,,Strong item throw
+LightThrowLw4,,Strong item throw
+LightThrowAirF4,,Strong item throw
+LightThrowAirB4,,Strong item throw
+LightThrowAirHi4,,Strong item throw
+LightThrowAirLw4,,Strong item throw
+HeavyThrowF4,,Strong item throw
+HeavyThrowB4,,Strong item throw
+HeavyThrowHi4,,Strong item throw
+HeavyThrowLw4,,Strong item throw
+SwordSwing1,Beam sword swings,Beam sword
+SwordSwing3,,Beam sword
+SwordSwing4,,Beam sword
+SwordSwingDash,,Beam sword
+LiftWait,LiftWait,LiftWait
+LiftWalk1,LiftWalk2,LiftWalk3
+LiftWalk2,LiftWalk3,LiftWalk4
+LiftTurn,LiftTurn,LiftTurn
+GuardOn,Shield startup,Shield startup
+Guard,Holding shield,Holding shield
+GuardOff,Shield release,Shield release
+GuardSetOff,Shield stun,Shield stun
+GuardReflect,Shield reflect,Shield reflect
+DownBoundU,"Missed tech bounce, facing up",Missed tech bounce
+DownWaitU,Lying on ground facing up,Lying on ground
+DownDamageU,Getting hit lying on ground facing up,Getting hit lying on ground
+DownStandU,Neutral getup,Neutral getup
+DownAttackU,Get up attack from ground face up,Get up attack
+DownFowardU,Missed tech roll forward,Missed tech roll
+DownBackU,Missed tech roll backward,Missed tech roll
+DownBoundD,Missed tech bounce facing down,Missed tech bounce
+DownWaitD,Lying on ground facing down,Lying on ground
+DownDamageD,Getting hit lying on the ground facing down,Getting hit lying on ground
+DownStandD,Neutral getup,Neutral getup
+DownAttackD,Get up attack from ground face down,Get up attack
+DownFowardD,Missed tech roll forward,Missed tech roll
+DownBackD,Missed tech roll backward,Missed tech roll
+Passive,Neutral tech,Neutral tech
+PassiveStandF,Forward tech,Forward tech
+PassiveStandB,Backward tech,Backward tech
+PassiveWall,Wall tech,Wall tech
+PassiveWallJump,Walljump tech/plain walljump,Walljump tech/plain walljump
+PassiveCeil,Ceiling tech,Ceiling tech
+ShieldBreakFly,ShieldBreakFly,Shield break 
+ShieldBreakFall,ShieldBreakFall,Shield break 
+ShieldBreakDownU,ShieldBreakDownU,Shield break 
+ShieldBreakDownD,ShieldBreakDownD,Shield break 
+ShieldBreakStandU,ShieldBreakStandU,Shield break 
+ShieldBreakStandD,ShieldBreakStandD,Shield break 
+FuraFura,Shield-break tottering,Shield break 
+Catch,Grab,Attempt grab
+CatchPull,Successful grab,Successful grab
+CatchDash,Running Grab,Attempt running Grab
+CatchDashPull,Succesful running Grab,Succesful running Grab
+CatchWait,Grabbing,Grabbing
+CatchAttack,Pummel,Pummel
+CatchCut,Opponent breaks grab,Opponent breaks grab
+ThrowF,Forward throw,Forward throw
+ThrowB,Back throw,Back throw
+ThrowHi,Up throw,Up throw
+ThrowLw,Down throw,Down throw
+CapturePulledHi,Becoming grabbed,Becoming grabbed
+CaptureWaitHi,When grabbed,When grabbed
+CaptureDamageHi,Pummeled,Pummeled
+CapturePulledLw,Becoming grabbed,Becoming grabbed
+CaptureWaitLw,When grabbed,When grabbed
+CaptureDamageLw,Pummeled,Pummeled
+CaptureCut,Grab release,Grab release
+CaptureJump,Jumping out of grab,Jumping out of grab
+EscapeF,Roll forward,Roll
+EscapeB,Roll backward,Roll
+Escape,Spotdodge,Spotdodge
+EscapeAir,Airdodge,Airdodge
+ReboundStop,ReboundStop,ReboundStop
+Rebound,Rebound,Rebound
+ThrownF,Thrown forward,Thrown forward
+ThrownB,Thrown backward,Thrown backward
+ThrownHi,Thrown up,Thrown up
+ThrownLw,Thrown down,Thrown down
+ThrownLwWomen,Thrown down as a female character,Thrown down
+Pass,Platform drop,Platform drop
+Ottotto,Ledge teeter,Ledge teeter
+OttottoWait,Ledge,Ledge teeter
+FlyReflectWall,Missed walltech,Missed tech
+FlyReflectCeil,Missed ceiling tech,Missed tech
+StopWall,Wall bonk,Wall bonk
+StopCeil,Ceiling bonk,Wall bonk
+MissFoot,Backward shield slideoff,Backward shield slideoff
+CliffCatch,Catching the ledge,Grab ledge
+CliffWait,Hanging on the ledge,Ledge teeter
+CliffClimbSlow,Climbing the ledge (100%+),Climb Ledge 100%+
+CliffClimbQuick,Climbing the ledge (<100%),Climb Ledge
+CliffAttackSlow,Ledge attack (100%+),Ledge attack 100%+
+CliffAttackQuick,Ledge attack (<100%),Ledge attack
+CliffEscapeSlow,Ledge roll (100%+),Ledge roll 100%+
+CliffEscapeQuick,Ledge roll (<100%),Ledge roll
+CliffJumpSlow1,Ledge jump/tournament winner (100%+),Ledge jump 100%+
+CliffJumpSlow2,Ledge jump/tournament winner (100%+),Ledge jump 100%+
+CliffJumpQuick1,Ledge jump/tournament winner (<100%),Ledge jump
+CliffJumpQuick2,Ledge jump/tournament winner (<100%),Ledge jump
+AppealR,Taunt right,Taunt
+AppealL,Taunt left,Taunt
+ShoulderedWait,DK carry,DK carry
+ShoulderedWalkSlow,DK carry,DK carry
+ShoulderedWalkMiddle,DK carry,DK carry
+ShoulderedWalkFast,DK carry,DK carry
+ShoulderedTurn,DK carry,DK carry
+ThrownFF,DK carry throw forward,DK carry throw forward
+ThrownFB,DK carry throws backward,DK carry throws backward
+ThrownFHi,DK carry throws up,DK carry throws up
+ThrownFLw,DK carry throws down,DK carry throws down
+CaptureCaptain,CaptureCaptain,CaptureCaptain
+CaptureYoshi,CaptureYoshi,CaptureYoshi
+YoshiEgg,YoshiEgg,YoshiEgg
+CaptureKoopa,CaptureKoopa,CaptureKoopa
+CaptureDamageKoopa,CaptureDamageKoopa,CaptureDamageKoopa
+CaptureWaitKoopa,CaptureWaitKoopa,CaptureWaitKoopa
+ThrownKoopaF,ThrownKoopaF,ThrownKoopaF
+ThrownKoopaB,ThrownKoopaB,ThrownKoopaB
+CaptureKoopaAir,CaptureKoopaAir,CaptureKoopaAir
+CaptureDamageKoopaAir,CaptureDamageKoopaAir,CaptureDamageKoopaAir
+CaptureWaitKoopaAir,CaptureWaitKoopaAir,CaptureWaitKoopaAir
+ThrownKoopaAirF,ThrownKoopaAirF,ThrownKoopaAirF
+ThrownKoopaAirB,ThrownKoopaAirB,ThrownKoopaAirB
+CaptureKirby,CaptureKirby,CaptureKirby
+CaptureWaitKirby,CaptureWaitKirby,CaptureWaitKirby
+ThrownKirbyStar,ThrownKirbyStar,ThrownKirbyStar
+ThrownCopyStar,ThrownCopyStar,ThrownCopyStar
+ThrownKirby,ThrownKirby,ThrownKirby
+Bury,Stuck in ground,Stuck in ground
+BuryWait,Stuck in ground,Stuck in ground
+BuryJump,Jump out stuck in ground,Jump out stuck in ground
+DamageSong,Put to sleep,Put to sleep
+DamageSongWait,Put to sleep,Put to sleep
+DamageSongRv,Put to sleep,Put to sleep
+DamageBind,Hit by Mewtwo Disable,Hit by Mewtwo Disable
+ThrownMewtwo,Hit by Mewtwo's Confusion,Hit by Mewtwo's Confusion
+ThrownMewtwoAir,Hit by Mewtwo's Confusion,Hit by Mewtwo's Confusion
+WarpStarJump,Warp beginning of match,Warp beginning of match
+WarpStarFall,Warp beginning of match,Warp beginning of match
+Entry,Warp beginning of match,Warp beginning of match
+EntryStart,Warp beginning of match,Warp beginning of match
+EntryEnd,Warp beginning of match,Warp beginning of match
+DamageIce,Damaged ice,Damaged ice
+DamageIceJump,Breakout ice,Breakout ice
