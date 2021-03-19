@@ -1,7 +1,6 @@
 import pymongo as mdb
 import slippi as slp
 import argparse
-import sys
 import json
 import os
 
@@ -34,7 +33,7 @@ def slp_to_mongoDB(path, db, state_dict={}, index=0, print_every=None, stop_at=N
         player_ports=get_ports(game)
         game_json=slp_game_to_json(game, player_ports, index=index)
         try:
-            db.games.insert_one(game_json)
+            db.games.update_one({"game":game_json["game"]},{"$set":game_json},upsert=True)
         except:
             pass
         prev_frame_hits=[None,None,None,None]
@@ -42,12 +41,12 @@ def slp_to_mongoDB(path, db, state_dict={}, index=0, print_every=None, stop_at=N
         for frame in range(game.metadata.duration):
             slp_json, prev_frame_hits, hit_land_frames=slp_frame_to_json(game, frame, player_ports, hit_land_frames=hit_land_frames, prev_frame_hits=prev_frame_hits, state_dict=state_dict, index=index)
             try:
-                db.frames.insert_one(slp_json)
+                db.frames.update_one({"game":slp_json["game"], "frame":slp_json["frame"]}, {"$set": slp_json}, upsert=True)
             except:
                 pass
         if print_every!= None:
             if count % print_every==0:
-                sys.stdout.write("Transfered "+str(count)+" slippi files to database.")
+                print("Transfered "+str(count)+" slippi files to database.")
         if index==stop_at:
             break
 
@@ -297,7 +296,11 @@ def frames_to_get_hit(in_frame,game,player_ports,prev_frame_hits=[None,None,None
             if found_1 and found_2:
                 break
         return [player1_frame, player1_attack, player2_frame, player2_attack]
-    else:
+    else: #Same hit considered as last move
+        if prev_frame_hits[0]!= None:
+            prev_frame_hits[0]-=1
+        if prev_frame_hits[2]!=None:
+            prev_frame_hits[2]-=1
         return prev_frame_hits
 
 if __name__=="__main__":
