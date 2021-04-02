@@ -1,25 +1,24 @@
 import pymongo as mdb
 import slippi as slp
 
-def group_will_get_hit(db, characters, times, states):
-    for time in times:
-        for state in states:
-            group=db.frames.aggregate([
+def group_will_get_hit(db, characters, time):
+    group=db.frames.aggregate([
                         {"$match":{
                                 "$or":[{
                                 "players.0.character":characters[0], 
                                 "players.1.character":characters[1], 
-                                "players.0.will_get_hit_by.time":time,
-                                "players.0.state":state},
+                                "players.0.will_get_hit_by.time":time},
                                 {"players.1.character":characters[0], 
                                 "players.0.character":characters[1], 
-                                "players.1.will_get_hit_by.time":time,
-                                "players.1.state":state}]}},
+                                "players.1.will_get_hit_by.time":time}]
+                        }},
                         {"$project":{"data":{"$cond":{
                             "if":{"$eq":[characters[0],{"$arrayElemAt":["$players.character",0]}]},
                                 "then":{
                                         "will_get_hit_by":{"$arrayElemAt":["$players.will_get_hit_by.move",0]},
                                         "count":{"$sum":1},
+                                        "state_1":{"$arrayElemAt":["$players.state",0]},
+                                        "state_2":{"$arrayElemAt":["$players.state",1]},
                                         "position_1":{"$arrayElemAt":["$players.position",0]},
                                         "position_2":{"$arrayElemAt":["$players.position",1]},
                                         "relative_position":{"$arrayElemAt":["$players.relative_position",0]},
@@ -35,6 +34,8 @@ def group_will_get_hit(db, characters, times, states):
                                     "then":{
                                         "will_get_hit_by":{"$arrayElemAt":["$players.will_get_hit_by.move",1]},
                                         "count":{"$sum":1},
+                                        "state_1":{"$arrayElemAt":["$players.state",1]},
+                                        "state_2":{"$arrayElemAt":["$players.state",0]},
                                         "position_1":{"$arrayElemAt":["$players.position",1]},
                                         "position_2":{"$arrayElemAt":["$players.position",0]},
                                         "relative_position":{"$arrayElemAt":["$players.relative_position",1]},
@@ -51,6 +52,8 @@ def group_will_get_hit(db, characters, times, states):
                         {"$group":{
                             "_id":{"will_get_hit_by":"$data.will_get_hit_by"},
                             "count":{"$sum":"$data.count"},
+                            "state_1":{"$push":"$data.state_1"},
+                            "state_2":{"$push":"$data.state_2"},
                             "position_1":{"$push":"$data.position_1"},
                             "position_2":{"$push":"$data.position_2"},
                             "relative_position":{"$push":"$data.relative_position"},
@@ -66,9 +69,10 @@ def group_will_get_hit(db, characters, times, states):
                             "will_get_hit_by":"$_id.will_get_hit_by",
                             "character_1":characters[0],
                             "character_2":characters[1],
-                            "frames_to_hit":time,
-                            "state":state,
+                            "frames_to_hit":str(time),
                             "count":1,
+                            "state_1":1,
+                            "state_2":1,
                             "position_1":1,
                             "position_2":1,
                             "relative_position":1,
@@ -79,5 +83,5 @@ def group_will_get_hit(db, characters, times, states):
                             "speed_2":1,
                             "hitstun":1}
                         }
-                ])
-            db.stats.insert_many(group)
+                    ], allowDiskUse=True)
+    db.stats.insert_many(group)
